@@ -25,7 +25,7 @@ $(document).ready(function() {
   };
   d3.json("http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
     var features = topojson.feature(topodata, topodata.objects.county).features;
-    var color = d3.scale.linear().domain([0,1]).range(["red","green"]);
+    var color = d3.scale.linear().domain([0,1]).range(["green","red"]);
     // var fisheye = d3.fisheye.circular().radius(100).distortion(2);
     var prj = function(v) {
       var ret = d3.geo.mercator().center([122,23.25]).scale(6000)(v);
